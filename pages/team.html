@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="" id="favicon" />
+    <title id="title">NFL site</title>
+    <link
+      rel="stylesheet"
+      href="
+    /styles/styles.css"
+    />
+  </head>
+
+  <body>
+    <header class="header">
+      s
+      <div>
+        <img src="/graphics/nfl_logo_large.png" alt="" />
+        <h1>Ian's NFL site</h1>
+      </div>
+
+      <nav class="navMenu">
+        <a href="index.html">Home</a>
+        <a href="standings.html">Standings</a>
+        <a href="schedule.html">Schedule</a>
+      </nav>
+    </header>
+    <main>
+      <div class="title">
+        <div class="styledTitle">
+          <div id="teamInfo">
+            <h1 id="teamName">Team Name</h1>
+            <p id="division">NFL Division</p>
+            <p id="record">Record: 8 - 8</p>
+          </div>
+          <div>
+            <img src="/graphics/nfl_logo_large.png" alt="" id="logo" />
+          </div>
+        </div>
+      </div>
+
+      <section class="sectionWrapper col">
+        <div class="section">
+          <h2>Recent Games</h2>
+          <table class="table" id="recentGames">
+            <tbody>
+              <tr>
+                <th></th>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th></th>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th></th>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th></th>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th></th>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section class="sectionWrapper col">
+        <div class="section">
+          <h2>Stats</h2>
+          <table class="table" id="stats">
+            <thead>
+              <tr>
+                <th>Stat</th>
+                <th>Season</th>
+                <th>Per Game</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Points Scored</th>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Passing Yards</th>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Rushing Yards</th>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>3rd Down</th>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Turnovers</th>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <th>Takeaways</th>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      <section class="sectionWrapper full">
+        <div class="section">
+          <h2>Roster</h2>
+          <div id="roster">
+            <div id="rosterToggles">
+              <button disabled>Offense</button>
+              <button>Defense</button>
+              <button>Special Teams</button>
+            </div>
+
+            <div>
+              <div class="rosterToggle active" id="offenseDiv">
+                <div class="filter">
+                  <label for="offSelect">Filter by position: </label>
+                  <select id="offSelect">
+                    <option value="all">ALL</option>
+                    <option value="qb">QB</option>
+                    <option value="wr">WR</option>
+                    <option value="te">TE</option>
+                    <option value="rb">RB</option>
+                    <option value="fb">FB</option>
+                    <option value="c">C</option>
+                    <option value="ot">OT</option>
+                    <option value="g">G</option>
+                  </select>
+                </div>
+                <div class="rosterTableWrapper">
+                  <table class="table" id="offense">
+                    <thead>
+                      <tr>
+                        <th colspan="2">Player</th>
+                        <th>Pos</th>
+                        <th>College</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="rosterToggle" id="defenseDiv">
+                <div class="filter">
+                  <label for="defSelect">Filter by position: </label>
+                  <select id="defSelect">
+                    <option value="all">ALL</option>
+                    <option value="cb">CB</option>
+                    <option value="s">S</option>
+                    <option value="lb">LB</option>
+                    <option value="dt">DT</option>
+                    <option value="de">DE</option>
+                  </select>
+                </div>
+                <div class="rosterTableWrapper">
+                  <table class="table" id="defense">
+                    <thead>
+                      <tr>
+                        <th colspan="2">Player</th>
+                        <th>Pos</th>
+                        <th>College</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="rosterToggle" id="specialDiv">
+                <div class="filter">
+                  <label for="speSelect">Filter by position: </label>
+                  <select id="speSelect">
+                    <option value="all">ALL</option>
+                    <option value="pk">K</option>
+                    <option value="p">P</option>
+                    <option value="ls">LS</option>
+                  </select>
+                </div>
+                <div class="rosterTableWrapper">
+                  <table class="table" id="special">
+                    <thead>
+                      <tr>
+                        <th colspan="2">Player</th>
+                        <th>Pos</th>
+                        <th>College</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="https://momentjs.com/downloads/moment.js"></script>
+  <script src="/scripts/script.js"></script>
+  <script src="/scripts/team.js"></script>
+</html>

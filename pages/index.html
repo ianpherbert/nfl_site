@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NFL site</title>
+    <link
+      rel="stylesheet"
+      href="
+    /styles/styles.css"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div>
+        <img src="/graphics/nfl_logo_large.png" alt="NFL Logo" />
+        <h1>Ian's NFL site</h1>
+      </div>
+
+      <nav class="navMenu">
+        <a href="index.html" class="active">Home</a>
+        <a href="standings.html">Standings</a>
+        <a href="schedule.html">Schedule</a>
+      </nav>
+    </header>
+    <main>
+      <div class="title">
+        <h1>Home</h1>
+      </div>
+
+      <section class="sectionWrapper col">
+        <div class="section">
+          <h2>News</h2>
+          <div id="news">
+            <div>
+              <img src="" alt="" id="featuredGraphic" />
+            </div>
+            <div>
+              <h3 id="featuredHeadline">Headline</h3>
+              <p id="featuredByline">
+                This is text, it will the the byline of this story
+              </p>
+              <a id="featuredLink" target="_blank">Read More</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sectionWrapper col">
+        <div class="section">
+          <h2>Recent Games</h2>
+          <ul class="schedule"></ul>
+          <a href="/pages/schedule.html">See all games</a>
+        </div>
+      </section>
+      <section class="sectionWrapper full">
+        <div class="section">
+          <h2>More News</h2>
+          <ul id="moreNews"></ul>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script src="https://momentjs.com/downloads/moment.js"></script>
+  <script src="/scripts/script.js"></script>
+  <script src="/scripts/index.js"></script>
+</html>
