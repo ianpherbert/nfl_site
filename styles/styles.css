@@ -1,0 +1,438 @@
+:root {
+  --primary: #c1cbd8;
+  --secondary2: #003069;
+  --secondary1: #8fa4bd42;
+  --secondary3: #d60303;
+  --borderRadius: 5px;
+  --primaryBackground: linear-gradient(
+    330deg,
+    #d603039f 0%,
+    #8fa4bd 20%,
+    #003069 100%
+  );
+  --backGround: linear-gradient(
+    330deg,
+    #8fa4bd5b 20%,
+    #021f425b 80%,
+    #8fa4bd5b 100%
+  );
+}
+/* ! * ! * ! * ! * ! * ! * ! * UNIVERSAL STYLES * ! * ! * ! * ! * ! * ! * ! */
+body {
+  background: var(--backGround);
+}
+header {
+  background: var(--primary);
+  font-family: "Montserrat", sans-serif;
+  margin: 0px;
+  background: var(--primaryBackground);
+  border-radius: var(--borderRadius);
+}
+header div {
+  color: var(--primary);
+  margin-left: 3%;
+  width: 100%;
+  display: flex;
+}
+header img {
+  padding-right: 20px;
+  height: 100px;
+}
+main {
+  margin: 10px auto auto auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 95vw;
+}
+select {
+  width: 100%;
+}
+
+/* loading item takes up 100% of the width and centers the items within its parent */
+.loading {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.loading > p {
+  width: 100%;
+  text-align: center;
+}
+.loading > span {
+  border-style: dotted;
+  border-color: var(--primary);
+  border-radius: 25px;
+  height: 50px;
+  width: 50px;
+  -webkit-animation: spin 5s linear infinite;
+  -moz-animation: spin 5s linear infinite;
+  animation: spin 5s linear infinite;
+}
+/* Simple spin animation */
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+/* navbar */
+.header nav {
+  justify-content: space-around;
+  align-items: flex-end;
+  display: flex;
+}
+/* links within the nav element */
+.header a {
+  text-decoration: none;
+  margin-bottom: 2vh;
+  transition: ease-in-out 0.53s;
+  position: relative;
+  width: 20vw;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  color: var(--primary);
+  font-weight: bold;
+}
+/* When hovered over, a psuedo element will underline the link */
+.header a:hover::after {
+  animation: dot 0.2s;
+  content: " ";
+  width: 2vw;
+  height: 2px;
+  background-color: var(--secondary3);
+  position: absolute;
+  bottom: 0%;
+  left: 9vw;
+  border-radius: 1px;
+}
+/* Appear from inside out */
+@keyframes dot {
+  0% {
+    clip-path: inset(0 50% 0 50%);
+    width: 0vw;
+  }
+  100% {
+    clip-path: inset(0 0% 0 0%);
+    opacity: 1;
+  }
+}
+/* Pseudo Element that underlines the element */
+.active::after {
+  transition: ease-in-out 0.2s;
+  animation: dot 0.2s;
+  content: " ";
+  width: 4vw;
+  height: 2px;
+  background-color: var(--secondary1);
+  position: absolute;
+  bottom: 0%;
+  left: 8vw;
+  border-radius: 1px;
+}
+/* Div that is the first child of the main element on each page */
+.title {
+  width: 99%;
+  text-align: center;
+  align-items: center;
+}
+/* Section is used for each distinct part of a page within the main */
+/* responsive side by side sections use .col breaks into full screen responsively */
+/* Full will take up the majority of the screen's width */
+.section {
+  margin: 10px;
+  padding: 5px;
+  background-color: var(--secondary1);
+  min-height: 20vh;
+  align-items: center;
+  border-radius: var(--borderRadius);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.full {
+  width: 100%;
+}
+.section a {
+  color: black;
+}
+.section h2 {
+  margin-left: 5%;
+  width: 100%;
+}
+/* .links is the first level this is used as a container which contains divs, which will wrap on breakpoints  */
+.links {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+.links label {
+  font-weight: bold;
+  font-size: 20px;
+}
+.links > div {
+  flex: 1;
+  display: block;
+  border-radius: var(--borderRadius);
+  text-align: center;
+  border-style: solid;
+  margin: 10px 5px 10px 5px;
+}
+.links > div > div {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.links a {
+  width: 100%;
+}
+/* Generic table class */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  border-style: solid;
+  text-align: left;
+}
+.table td,
+.table th {
+  min-height: 20px;
+  border-style: solid;
+  min-width: fit-content;
+  text-align: left;
+}
+/* ! * ! * ! * ! * ! * ! * ! * INDEX STYLES * ! * ! * ! * ! * ! * ! * ! */
+/* Used for the news section on the index page */
+#news {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#news div {
+  text-align: center;
+}
+#news img {
+  width: 80%;
+  border-radius: var(--borderRadius);
+}
+#moreNews {
+  background-color: var(--secondary1);
+  list-style: none;
+  text-align: left;
+  margin: 0px 5% 5% 5%;
+  padding: 20px;
+  width: 100%;
+}
+#moreNews li {
+  margin: 0px 0px 10px 0px;
+  padding: 0px;
+}
+/* ! * ! * ! * ! * ! * ! * ! * SCHEDULE * ! * ! * ! * ! * ! * ! * ! */
+/* #scheduleHead is the title and select on the schedule page */
+/* The divs within the shedule head are responsive will break from two columns into one on mobile */
+#scheduleHead {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+/* The .schedule class is used to display a ul list of games */
+.schedule {
+  padding: 0px;
+  list-style: none;
+  margin: 0%;
+  left: 0px;
+  width: 100%;
+}
+.schedule li {
+  margin: 0px;
+  width: 100%;
+}
+/* the .game div is the parent of the 4 divs with game information */
+.game {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-bottom: 1px solid rgba(54, 54, 54, 0.151);
+}
+/* used as the clock/Final/date inside of the divs */
+.game span {
+  justify-self: baseline;
+  font-weight: bold;
+  width: 20px;
+}
+/* Divs within the .game class div will be stretched to equal width */
+.game div {
+  min-width: 100px;
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+.game img {
+  width: 40px;
+}
+
+/* ! * ! * ! * ! * ! * ! * ! * STANDINGS * ! * ! * ! * ! * ! * ! * ! */
+/* .standingTable is the wrapper for standings <table> */
+.standingTable {
+  width: 100%;
+  margin: 0px 1vw 5vh 1vw;
+}
+/* .conf takes up the entirety of the parent */
+.standingTable.conf {
+  width: 100%;
+}
+/* style for the table that contains the standings */
+.standingTable table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+/* Solid border for the table, is collapsed into parent table */
+.standingTable td,
+.standingTable th {
+  border-style: solid;
+}
+/* ! * ! * ! * ! * ! * ! * ! * TEAM * ! * ! * ! * ! * ! * ! * ! */
+/* .styledTitle will take the color of the team as a style element, as well as displays more information than a regular title */
+.styledTitle {
+  color: White;
+  height: 32vh;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  margin: auto;
+}
+/* divs within the .styledTitle are stretched to fit the container */
+.styledTitle > div {
+  text-align: center;
+  flex: 1;
+}
+.styledTitle img {
+  margin: 1vh 0vh 1vh 0vh;
+  height: 30vh;
+}
+/*                      Roster                      */
+#roster {
+  width: 100%;
+}
+#roster > div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+#roster > div > button {
+  flex: 1;
+  color: black;
+  border-style: solid;
+  font-weight: bold;
+  border-radius: 0px 0px 3px 3px;
+  margin: 0px;
+}
+
+/* hides the divs that contain the team */
+.rosterToggle {
+  display: none;
+}
+/* Shows the div */
+.rosterToggle.active {
+  display: inline;
+}
+.filter {
+  margin: 50px;
+  display: flex;
+}
+.filter select {
+  margin-left: 20px;
+  width: 100px;
+}
+.rosterTableWrapper {
+  height: 80vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+/* Breaks at 750pw, 800px */
+@media screen and (max-width: 750px) {
+  .links a {
+    width: 100%;
+  }
+  .col {
+    width: 100%;
+  }
+  .standingTable {
+    width: 100%;
+  }
+
+  .playerPhoto {
+    height: 50px;
+  }
+  .game img {
+    display: none;
+  }
+  #scheduleHead div {
+    width: 80vw;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 750px) and (max-width: 900px) {
+  .links a {
+    width: 49%;
+  }
+  .col {
+    width: 48%;
+  }
+  .standingTable {
+    width: 100%;
+  }
+
+  .playerPhoto {
+    width: 20vw;
+  }
+  .game img {
+    width: 40px;
+  }
+  #scheduleHead div {
+    width: 45vw;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 901px) {
+  .links a {
+    width: 25%;
+  }
+  .col {
+    width: 49%;
+  }
+  .standingTable {
+    width: 45%;
+  }
+
+  .playerPhoto {
+    width: 18vw;
+  }
+  .game img {
+    width: 40px;
+  }
+  #scheduleHead div {
+    width: 45vw;
+    text-align: center;
+  }
+}
